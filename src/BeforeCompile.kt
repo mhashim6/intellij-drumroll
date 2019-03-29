@@ -6,7 +6,7 @@ import com.intellij.openapi.compiler.CompileTask
  */
 class BeforeCompile : CompileTask {
     override fun execute(context: CompileContext): Boolean {
-        play("drumroll.mp3")
+        play("drumroll_faded.mp3")
         return true
     }
 }
