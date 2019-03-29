@@ -8,14 +8,15 @@ import com.intellij.openapi.project.Project
  *@author mhashim6 on 20/03/19
  */
 class Drumroll(private val project: Project) : ProjectComponent {
-    private val messages = project.messageBus.connect()
+    private val messages by lazy { project.messageBus.connect() }
 
     override fun projectOpened() {
-        project.messageBus.connect().subscribe(CompilerTopics.COMPILATION_STATUS, object : CompilationStatusListener {
+        messages.subscribe(CompilerTopics.COMPILATION_STATUS, object : CompilationStatusListener {
             override fun compilationFinished(aborted: Boolean, errors: Int, warnings: Int, compileContext: CompileContext) {
                 when {
                     errors > 0 -> play("failure.mp3")
                     warnings > 0 -> play("metal_gear.mp3")
+                    else -> play("Ba-Dum-Tss!.mp3")
                 }
             }
         })
