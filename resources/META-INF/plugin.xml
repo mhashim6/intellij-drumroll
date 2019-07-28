@@ -1,17 +1,14 @@
 <idea-plugin>
     <id>mhashim6.idea.plugin.drumroll</id>
     <name>Drumroll</name>
-    <version>0.2</version>
+    <version>0.3</version>
     <vendor email="m6hashim@gmail.com" url="https://github.com/mhashim6">Muhammad Hashim</vendor>
 
-    <description>It plays a drum roll sound on compile/build. and other equally-fun sounds when build has errors, or
+    <description>Plays a drum roll sound on compile/build. and other equally-fun sounds when build has errors, or
         warnings.
     </description>
 
-    <change-notes><![CDATA[tl;dr: fixed <a href="https://github.com/mhashim6/intellij-drumroll/issues/2">this issue</a>.<br />
-    - Separated the drum roll from the Ba-Dum-Tss.<br />
-        - Drum roll track is longer and fades out after a few seconds, in case of long build times.<br />
-        - The Ba-Dum-Tss now only plays on build success.]]></change-notes>
+    <change-notes>New Sound effects: applause, laughter, booing</change-notes>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
     <idea-version since-build="173.0"/>
