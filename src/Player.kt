@@ -6,11 +6,11 @@ import jaco.mp3.player.MP3Player
 
 private val player = MP3Player()
 
-fun play(what: String) {
+fun play(what: String, extension: String = "mp3") {
     if (!player.isStopped)
         player.stop()
     player.playList.clear()
-    player.addToPlayList(Drumroll::class.java.getResource(what))
+    player.addToPlayList(Drumroll::class.java.getResource("$what.$extension"))
     player.play()
 }
 
