@@ -9,14 +9,16 @@ import com.intellij.openapi.project.Project
  */
 class Drumroll(private val project: Project) : ProjectComponent {
     private val messages by lazy { project.messageBus.connect() }
+    private val success = arrayOf("Ba-Dum-Tss!", "applause")
+    private val error = arrayOf("failure", "laughter", "booing")
 
     override fun projectOpened() {
         messages.subscribe(CompilerTopics.COMPILATION_STATUS, object : CompilationStatusListener {
             override fun compilationFinished(aborted: Boolean, errors: Int, warnings: Int, compileContext: CompileContext) {
                 when {
-                    errors > 0 -> play("failure.mp3")
-                    warnings > 0 -> play("metal_gear.mp3")
-                    else -> play("Ba-Dum-Tss!.mp3")
+                    errors > 0 -> play(error.random())
+                    warnings > 0 -> play("metal_gear")
+                    else -> play(success.random())
                 }
             }
         })
