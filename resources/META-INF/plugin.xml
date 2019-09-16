@@ -1,14 +1,14 @@
 <idea-plugin>
     <id>mhashim6.idea.plugin.drumroll</id>
-    <name>Drumroll</name>
-    <version>0.3</version>
+    <name>Drum-roll</name>
+    <version>0.4</version>
     <vendor email="m6hashim@gmail.com" url="https://github.com/mhashim6">Muhammad Hashim</vendor>
 
     <description>Plays a drum roll sound on compile/build. and other equally-fun sounds when build has errors, or
         warnings.
     </description>
 
-    <change-notes>New Sound effects: applause, laughter, booing</change-notes>
+    <change-notes>SpongeBob time cards sound effects are now included.</change-notes>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
     <idea-version since-build="173.0"/>
@@ -16,6 +16,7 @@
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->
     <depends>com.intellij.modules.lang</depends>
+    <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
         <compiler.task execute="BEFORE" implementation="BeforeCompile"/>
