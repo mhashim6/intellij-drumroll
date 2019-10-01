@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>mhashim6.idea.plugin.drumroll</id>
     <name>Drum-roll</name>
-    <version>0.5</version>
+    <version>0.6</version>
     <vendor email="m6hashim@gmail.com" url="https://github.com/mhashim6">Muhammad Hashim</vendor>
 
     <description>Plays a drum roll sound on compile/build. and other equally-fun sounds when build has errors, or
