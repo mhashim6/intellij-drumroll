@@ -12,8 +12,9 @@ open class Drumroll(private val project: Project) {
     enum class BuildState { Success, Error, Warning }
 
     private val messages by lazy { project.messageBus.connect() }
-    private val success = arrayOf("Ba-Dum-Tss!", "applause")
-    private val error = arrayOf("failure", "laughter", "booing")
+    private val success = arrayOf("Ba-Dum-Tss!", "wow", "boring")
+    private val error = arrayOf("failure", "laughter", "doh", "oh_geez")
+    private val warnings = arrayOf("metal_gear")
     private val timeCards = arrayOf("eternity_later", "moments_later", "pair_of_pants_later", "inches_later")
 
     init {
@@ -36,7 +37,7 @@ open class Drumroll(private val project: Project) {
                     when (state) {
                         BuildState.Success -> success.random()
                         BuildState.Error -> error.random()
-                        BuildState.Warning -> "metal_gear"
+                        BuildState.Warning -> warnings.random()
                     }
                 else timeCards.random()
         )
