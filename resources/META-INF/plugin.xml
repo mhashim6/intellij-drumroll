@@ -1,14 +1,18 @@
 <idea-plugin>
     <id>mhashim6.idea.plugin.drumroll</id>
     <name>Drum-roll</name>
-    <version>0.6</version>
+    <version>0.7</version>
     <vendor email="m6hashim@gmail.com" url="https://github.com/mhashim6">Muhammad Hashim</vendor>
 
     <description>Plays a drum roll sound on compile/build. and other equally-fun sounds when build has errors, or
         warnings.
     </description>
 
-    <change-notes>Android Studio: Support for android gradle events; However, drum roll sound doesn't play.
+    <change-notes>
+        <![CDATA[
+        - New sound fx: Morty's "Oh geez"; Homer Simpson's doh, boring; Owen Wilson's WOW.<br/>
+        - Removed the applause and the booing as requested.
+        ]]>
     </change-notes>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
