@@ -33,7 +33,9 @@ open class Drumroll(private val project: Project) {
 
     fun notifyState(state: BuildState) {
         play(
-                if (nextBoolean())
+                if (nextBoolean() && nextBoolean())
+                    timeCards.random()
+                else
                     when (state) {
                         BuildState.Success -> success.random()
                         BuildState.Error -> error.random()
