@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'mhashim6.idea.plugin'
-version '0.8'
+version '1.0'
 
 repositories {
     mavenCentral()
@@ -31,4 +31,8 @@ intellij {
 patchPluginXml {
     sinceBuild '173'
     untilBuild null
+}
+
+publishPlugin {
+    token = 'System.getenv("ORG_GRADLE_PROJECT_intellijPublishToken")'
 }

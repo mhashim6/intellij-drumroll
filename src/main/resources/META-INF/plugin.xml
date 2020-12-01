@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>mhashim6.idea.plugin.drumroll</id>
     <name>Drum-roll</name>
-    <version>0.8</version>
+    <version>1.0</version>
     <vendor email="m6hashim@gmail.com" url="https://github.com/mhashim6">Muhammad Hashim</vendor>
 
     <description>Get notified when build finishes in a very special way: Plays a drum roll sound on compile/build. and
@@ -11,12 +11,7 @@
 
     <change-notes>
         <![CDATA[
-        - New sound: Better Call Saul!<br/>
-        - Removed Laughter sound.<br/>
-        - Reduced probability of SpongeBob time cards.<br/>
-        <br/>v0.7<br/>
-        - New sound fx: Morty's "Oh geez"; Homer Simpson's doh, boring; Owen Wilson's WOW.<br/>
-        - Removed the applause and the booing as requested.
+          - Using Gradle instead of DevKit. Thanks, @artplastika !
         ]]>
     </change-notes>
 
