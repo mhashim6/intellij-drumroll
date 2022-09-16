@@ -12,11 +12,11 @@ class AndroidDrumroll(private val project: Project) : Drumroll(project) {
         AndroidProjectBuildNotifications.subscribe(project) { ctx ->
             if (ctx is GradleBuildContext) ctx.buildResult.run {
                 notifyState(
-                        when {
-                            isBuildSuccessful -> BuildState.Success
-                            getCompilerMessages(Message.Kind.WARNING).isNotEmpty() -> BuildState.Warning
-                            else -> BuildState.Error
-                        }
+                    when {
+                        isBuildSuccessful -> BuildState.Success
+                        getCompilerMessages(Message.Kind.WARNING).isNotEmpty() -> BuildState.Warning
+                        else -> BuildState.Error
+                    }
                 )
             }
         }
