@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>mhashim6.idea.plugin.drumroll</id>
-    <name>Drum-Roll</name>
-    <version>1.1</version>
+    <name>Drumroll</name>
+    <version>2.0</version>
     <vendor email="msg@mhashim6.me" url="https://mhashim6.me">Muhammad Hashim</vendor>
 
     <description>Get notified when build finishes in a very special way: Plays a drum roll sound on compile/build. and
@@ -11,8 +11,10 @@
 
     <change-notes>
         <![CDATA[
+          - Fixed Drum-Roll sound not running
+          - Gradle Support for non-android Projects.
+          - Android Studio Dolphin Support
           - Updated dependencies
-          - Gradle Support for non-android Intellij Idea
         ]]>
     </change-notes>
 

@@ -1,11 +1,11 @@
 plugins {
     java
     id("org.jetbrains.kotlin.jvm") version "1.6.20"
-    id("org.jetbrains.intellij") version "1.7.0"
+    id("org.jetbrains.intellij") version "1.9.0"
 }
 
 group = "mhashim6.idea.plugin"
-version = "1.0"
+version = "2.0"
 
 repositories {
     mavenCentral()
@@ -21,7 +21,7 @@ intellij {
 }
 
 dependencies {
-    implementation(fileTree("lib"){
+    implementation(fileTree("lib") {
         include("*.jar")
     })
 }
@@ -40,14 +40,16 @@ tasks {
         sinceBuild.set("213")
         untilBuild.set("223.*")
     }
-
+    buildSearchableOptions {
+        enabled = false
+    }
     signPlugin {
-        certificateChain.set(System.getenv("CERTIFICATE_CHAIN"))
-        privateKey.set(System.getenv("PRIVATE_KEY"))
-        password.set(System.getenv("PRIVATE_KEY_PASSWORD"))
+        certificateChain.set(project.properties["CERTIFICATE_CHAIN"] as String)
+        privateKey.set(project.properties["PRIVATE_KEY"] as String)
+        password.set(project.properties["PRIVATE_KEY_PASSWORD"] as String)
     }
 
     publishPlugin {
-        token.set(System.getenv("PUBLISH_TOKEN"))
+        token.set(project.properties["intellijPublishToken"] as String)
     }
 }
