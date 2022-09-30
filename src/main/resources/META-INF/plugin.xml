@@ -1,8 +1,8 @@
 <idea-plugin>
     <id>mhashim6.idea.plugin.drumroll</id>
-    <name>Drum-roll</name>
-    <version>1.0</version>
-    <vendor email="m6hashim@gmail.com" url="https://github.com/mhashim6">Muhammad Hashim</vendor>
+    <name>Drumroll</name>
+    <version>2.0</version>
+    <vendor email="msg@mhashim6.me" url="https://mhashim6.me">Muhammad Hashim</vendor>
 
     <description>Get notified when build finishes in a very special way: Plays a drum roll sound on compile/build. and
         other equally-fun sounds when build yields errors, or
@@ -11,24 +11,26 @@
 
     <change-notes>
         <![CDATA[
-          - Using Gradle instead of DevKit. Thanks, @artplastika !
+          - Fixed Drum-Roll sound not running
+          - Gradle Support for non-android Projects.
+          - Android Studio Dolphin Support
+          - Updated dependencies
         ]]>
     </change-notes>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
-    <idea-version since-build="173.0"/>
+    <idea-version since-build="201.6668.113"/>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->
     <depends>com.intellij.modules.java</depends>
     <depends>com.intellij.modules.lang</depends>
-    <depends optional="true" config-file="android_config.xml">org.jetbrains.android</depends>
+    <depends>org.jetbrains.android</depends>
     <depends>com.intellij.modules.platform</depends>
-    <!--    <depends>com.intellij.modules.python</depends>-->
 
-    <extensions defaultExtensionNs="com.intellij">
-        <compiler.task execute="BEFORE" implementation="BeforeCompile"/>
-    </extensions>
+    <!--    <extensions defaultExtensionNs="com.intellij">-->
+    <!--        <compiler.task execute="BEFORE" implementation="BeforeCompile"/>-->
+    <!--    </extensions>-->
 
     <project-components>
         <component>
