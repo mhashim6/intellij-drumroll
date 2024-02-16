@@ -1,7 +1,6 @@
 plugins {
     java
-    id("org.jetbrains.kotlin.jvm") version "1.6.20"
-    id("org.jetbrains.intellij") version "1.9.0"
+    id("org.jetbrains.kotlin.jvm") version "1.9.22"
 }
 
 group = "mhashim6.idea.plugin"
@@ -29,7 +28,7 @@ dependencies {
 tasks {
     // Set the JVM compatibility versions
     withType<JavaCompile> {
-        sourceCompatibility = "11"
+        sourceCompatibility = "17"
         targetCompatibility = "11"
     }
     withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
