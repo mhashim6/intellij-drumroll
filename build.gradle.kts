@@ -1,6 +1,7 @@
 plugins {
     java
     id("org.jetbrains.kotlin.jvm") version "1.9.22"
+    id("org.jetbrains.intellij") version "1.17.1"
 }
 
 group = "mhashim6.idea.plugin"
@@ -13,9 +14,9 @@ repositories {
 // Configure Gradle IntelliJ Plugin
 // Read more: https://plugins.jetbrains.com/docs/intellij/tools-gradle-intellij-plugin.html
 intellij {
-    version.set("2021.3")
+    version.set("2022.1")
     type.set("IC") // Target IDE Platform
-    pluginName.set("Drum-Roll") //TODO
+    pluginName.set("Drum-Roll")
     plugins.set(listOf("java", "android"))
 }
 
@@ -36,8 +37,8 @@ tasks {
     }
 
     patchPluginXml {
-        sinceBuild.set("213")
-        untilBuild.set("223.*")
+        sinceBuild.set("221")
+        untilBuild.set("233.*")
     }
     buildSearchableOptions {
         enabled = false

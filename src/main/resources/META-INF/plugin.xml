@@ -32,9 +32,16 @@
     <!--        <compiler.task execute="BEFORE" implementation="BeforeCompile"/>-->
     <!--    </extensions>-->
 
-    <project-components>
-        <component>
-            <implementation-class>Drumroll</implementation-class>
-        </component>
-    </project-components>
+    <projectListeners>
+        <listener
+            class="Drumroll$Listener"
+            topic="com.intellij.execution.ExecutionListener"/>
+        <listener
+            class="Drumroll$Listener"
+            topic="com.intellij.task.ProjectTaskListener"/>
+        <listener
+            class="Drumroll$Listener"
+            topic="com.android.tools.idea.projectsystem.ProjectSystemBuildManager$BuildListener"/>
+    </projectListeners>
+
 </idea-plugin>
