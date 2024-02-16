@@ -1,25 +1,23 @@
 <idea-plugin>
     <id>mhashim6.idea.plugin.drumroll</id>
-    <name>Drumroll</name>
-    <version>2.0</version>
+    <name>Drum-Roll</name>
+    <version>2.1</version>
     <vendor email="msg@mhashim6.me" url="https://mhashim6.me">Muhammad Hashim</vendor>
 
-    <description>Get notified when build finishes in a very special way: Plays a drum roll sound on compile/build. and
+    <description>Get notified when build finishes in a very special way: Plays a drum roll sound on compile/build, and
         other equally-fun sounds when build yields errors, or
         warnings.
     </description>
 
     <change-notes>
         <![CDATA[
-          - Fixed Drum-Roll sound not running
-          - Gradle Support for non-android Projects.
-          - Android Studio Dolphin Support
+          - Fixed Crash on Startup
+          - Gradle Support for non-android Projects
+          - Removed usage of deprecated intellij APIs
+          - Android Studio Hedgehog Support
           - Updated dependencies
         ]]>
     </change-notes>
-
-    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
-    <idea-version since-build="201.6668.113"/>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->
